@@ -2,7 +2,7 @@
 
 # Define paths
 HOSTS_FILE="/etc/hosts"
-DOMAINS_FILE="$HOME/.config/mutombo.txt"
+DOMAINS_FILE="$HOME/.config/mutombo/blocklist.txt"
 IP_BLOCK="127.0.0.1"
 STATE_FILE="$HOME/mutombo"
 

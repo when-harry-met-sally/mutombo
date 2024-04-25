@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Ensure script is run with sudo
-if [ "$(id -u)" != "0" ]; then
-	echo "This script must be run as root"
-	exit 1
-fi
-
 # Define paths
 HOSTS_FILE="/etc/hosts"
 DOMAINS_FILE="$HOME/.config/mutombo.txt"
@@ -83,8 +77,8 @@ toggle_mutombo_block() {
 	update_block_state # Toggle the state after processing
 
 	# Overwrite the original hosts file with the new content
-	cat "$temp_file" >"$HOSTS_FILE" # This overwrites the contents but keeps original permissions
-	rm "$temp_file"                 # Clean up the temporary file
+	sudo cp "$temp_file" "$HOSTS_FILE" # This overwrites the contents but keeps original permissions
+	rm "$temp_file"                    # Clean up the temporary file
 
 	# Clear DNS cache
 	sudo dscacheutil -flushcache

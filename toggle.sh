@@ -4,7 +4,7 @@
 HOSTS_FILE="/etc/hosts"
 DOMAINS_FILE="$HOME/.config/mutombo/blocklist.txt"
 IP_BLOCK="127.0.0.1"
-STATE_FILE="$HOME/mutombo"
+STATE_FILE="$HOME/.mutombo"
 
 # Load or initialize block state
 echo "Checking state file at $STATE_FILE"

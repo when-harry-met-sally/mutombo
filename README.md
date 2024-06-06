@@ -15,4 +15,3 @@ Example usage:
 ```bash
 alias block="sh $HOME/.dotfiles/dependencies/github/when-harry-met-sally/mutombo/toggle.sh"
 ```
-
